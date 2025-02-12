@@ -7,7 +7,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # Rutas del administrador
-    path('', include('gymapp.urls')),  # Redirige las rutas de la aplicación gymapp
+    path('', include('Crud.gymapp.urls')),  # Redirige las rutas de la aplicación gymapp
 ]
 
 # Si tienes archivos multimedia, añade esta línea
