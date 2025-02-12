@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-ROOT_URLCONF = 'Crud.urls'
+ROOT_URLCONF = 'Crud.gymapp.urls'
 
 TEMPLATES = [
     {
