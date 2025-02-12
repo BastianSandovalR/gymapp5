@@ -5,8 +5,7 @@ from django.core.validators import MinValueValidator
 class Usuario(models.Model):
     nombre = models.CharField(max_length=100, unique=True)
 
-    class Meta:
-        app_label = 'Crud.gymapp'  # Asegura que Django reconozca la aplicación
+     # Asegura que Django reconozca la aplicación
 
     def __str__(self):
         return self.nombre
