@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Rutina, Serie, Usuario, Ejercicio
+from  Crud.gymapp.models import Rutina, Serie, Usuario, Ejercicio
 from .forms import RutinaForm, SerieForm
 from collections import defaultdict
 from django.http import JsonResponse
