@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Agrega BASE_DIR al principio del sys.path para que Python encuentre la carpeta gymapp.
 sys.path.insert(0, str(BASE_DIR))
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Crud.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Crud.Crud.settings')
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
