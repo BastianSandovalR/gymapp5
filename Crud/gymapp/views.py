@@ -150,3 +150,8 @@ def historial_ejercicio(request, usuario_id, ejercicio_id):
         rut['fecha'] = rut['fecha'].strftime("%d-%m-%Y")
     
     return JsonResponse(rutinas_list, safe=False)
+
+def eliminar_rutina(request, rutina_id):
+    rutina = get_object_or_404(Rutina, id=rutina_id)
+    rutina.delete()
+    return redirect(reverse('inicio'))  # Redirigir a la página principal
