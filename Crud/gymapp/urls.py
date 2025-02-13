@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 from .views import historial_ejercicio
+from django.contrib import admin  
 
 urlpatterns = [
     path('', views.inicio, name='inicio'),
