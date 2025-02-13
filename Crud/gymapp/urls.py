@@ -12,6 +12,7 @@ urlpatterns = [
     path('serie/<int:serie_id>/editar/', views.editar_serie, name='editar_serie'),
     path('serie/<int:serie_id>/editar_vivo/', views.editar_serie_vivo, name='editar_serie_vivo'),
     path("api/historial/<int:usuario_id>/<int:ejercicio_id>/", historial_ejercicio, name="historial_ejercicio"),
+    path('eliminar_rutina/<int:rutina_id>/', views.eliminar_rutina, name='eliminar_rutina'),
     
 
 ]
