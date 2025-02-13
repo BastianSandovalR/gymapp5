@@ -4,6 +4,7 @@ from .forms import RutinaForm, SerieForm
 from collections import defaultdict
 from django.http import JsonResponse
 from django.db.models import Max
+from django.urls import reverse
 
 def inicio(request):
     rutinas = Rutina.objects.all().order_by('-fecha')
