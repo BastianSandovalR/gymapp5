@@ -5,6 +5,7 @@ from collections import defaultdict
 from django.http import JsonResponse
 from django.db.models import Max
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 def inicio(request):
     rutinas = Rutina.objects.all().order_by('-fecha')
@@ -156,3 +157,9 @@ def eliminar_rutina(request, rutina_id):
     rutina = get_object_or_404(Rutina, id=rutina_id)
     rutina.delete()
     return redirect(reverse('inicio'))  # Redirigir a la página principal
+
+
+
+# Verifica si ya existe un superusuario, si no, lo crea
+if not User.objects.filter(username="admin").exists():
+    User.objects.create_superuser(username="admin", password="admin123", email="admin@example.com")
