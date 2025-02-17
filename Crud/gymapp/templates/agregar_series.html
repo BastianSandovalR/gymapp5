@@ -120,7 +120,13 @@
     </div>
 
     <div class="d-grid gap-2 mt-3">
-        <a href="{% url 'inicio' %}" class="btn btn-danger">Finalizar Rutina</a>
+        <!-- Mensaje de confirmación en el onclick -->
+        <a href="{% url 'inicio' %}"
+           class="btn btn-danger"
+           onclick="return confirm('¿Estás seguro de finalizar la rutina?');"
+        >
+            Finalizar Rutina
+        </a>
     </div>
 </div>
 
